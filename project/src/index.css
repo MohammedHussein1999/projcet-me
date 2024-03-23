@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+}
+@layer base {
+  html {
+    @apply text-neutral-800;
+  }
+  html.dark {
+    @apply text-neutral-50;
+    @apply bg-neutral-800;
+  }
+}
+
+* {
+  @apply m-0 p-0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body {
+  @apply bg-[#F8F8F8];
+}
+button {
+  @apply inline-block w-full rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)];
+}
+.section-logIn {
+  @apply h-screen w-full flex justify-center space-y-6 flex-wrap flex-col  content-center;
+}
+img {
+  @apply w-60 my-3 m-auto;
+}
+.form-logIn {
+  @apply flex space-y-10 flex-col flex-wrap justify-center content-center w-[600px];
+}
+.link-log {
+  @apply text-warning transition duration-150 ease-in-out mx-3  hover:text-primary focus:text-primary-700 active:text-primary;
+}
+
+.form-singup {
+  @apply flex flex-wrap flex-col  text-center m-auto w-[500px] space-y-4;
+}
+/* NavBar */
+
+.nav-bar {
+  @apply fixed bg-primary;
+}
+.nav-bar .logo-bar {
+  @apply flex flex-grow max-lg:justify-center max-lg:text-3xl;
+}
+.nav-bar .buttons-nav {
+  @apply max-sm:hidden;
+}
+.nav-bar .buttons-nav .button-nav {
+  @apply text-white font-black;
+}
+.group-button-nav {
+  @apply flex flex-nowrap space-x-5 justify-center items-center mx-3 max-lg:flex-wrap  w-[600px];
+}
+
+.nav-bar .drab-screen-nav {
+  @apply lg:hidden relative;
+}
+.nav-bar .drab-screen-nav:hover > .group-button-nav {
+  @apply absolute bg-primary  flex flex-col items-center  justify-center w-60 top-5 rounded-lg;
+}
+.nav-bar .drab-screen-nav:hover > .group-button-nav .button-nav {
+  @apply w-40 border-white border-8 rounded-lg text-white;
+}
+
+/* page home */
+
+.min-page-home > div {
+  @apply grid justify-center grid-cols-4 gap-6 content-start  m-auto w-3/4 mt-28  max-sm:grid-cols-1 max-md:grid-cols-2;
+}
+.min-page-card {
+  @apply m-3 mb-5;
+}
+
+.min-page-card .card-ad {
+  @apply p-5;
+}
+/* team Card */
+.team-card {
+  @apply bg-black flex mb-20  flex-row flex-wrap  w-full justify-center p-10 mt-20 items-center  space-x-5 min-h-[300px];
+}
+
+/* footer */
+.min-footer {
+  @apply bg-black min-h-[40vh]    w-full;
+}
+.footer {
+  @apply m-auto  w-4/5;
+}
+.footer ul {
+  @apply grid justify-evenly  gap-10 p-20 text-white grid-cols-5 max-sm:grid-cols-2 max-md:grid-cols-3;
+}
+.footer ul li {
+  @apply hover:text-primary;
+}
+/* one  */
+.drab-team {
+  @apply w-full p-24 flex justify-center flex-row flex-wrap;
+}
+.drab-team .list {
+  @apply m-auto  w-60;
+}
+.show-element {
+  @apply grid grid-cols-4 h-screen max-sm:grid-cols-2 max-md:grid-cols-3;
+}
+
+/* chat */
+
+.container-chat {
+  @apply w-full m-20 rounded-lg flex justify-center content-center flex-wrap;
+}
+.container-chat .chat-screen {
+  @apply w-full max-w-full border-2 min-h-[700px] bg-white border-black rounded-lg;
+}
+.container-chat .cont-sand {
+  @apply w-full flex flex-nowrap  items-center overflow-hidden;
+}
+.container-chat .cont-sand .input-mass {
+  @apply w-[95%]  text-right border-4 rounded-md border-black h-[100%] bg-[#fffefe];
+}
+.container-chat .cont-sand .icon-sand {
+  @apply rounded-md text-white w-[5%]  h-full text-6xl  p-2;
+}
+
+.massage-form {
+  @apply flex flex-row flex-wrap mt-5 items-center p-2 justify-start space-x-1 min-h-[10px] break-all !important;
+}
+.massage-form p {
+  @apply text-clip;
+}
